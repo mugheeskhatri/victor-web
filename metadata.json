@@ -1,0 +1,8 @@
+
+{
+  "name": "Victor - No-BS Accountability",
+  "description": "A high-conversion marketing website for Victor, the tough-love accountability coach app designed to enforce discipline around health basics.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
