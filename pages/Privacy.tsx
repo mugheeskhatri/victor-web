@@ -13,6 +13,7 @@ const Privacy: React.FC = () => {
       <div className="space-y-16">
 
         {/* 1. Introduction */}
+        
         <section>
           <h2 className="text-2xl font-bold uppercase mb-6 text-black border-b-4 border-black inline-block">
             1. Introduction
