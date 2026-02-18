@@ -1,12 +1,13 @@
 
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, Link, useLocation, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Features from './pages/Features';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Support from './pages/Support';
 import About from './pages/About';
+import SmsConsent from './pages/SmsConsent';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -58,6 +59,7 @@ const Footer = () => (
         <ul className="space-y-4 text-xs text-gray-400 font-bold uppercase tracking-widest">
           <li><Link to="/privacy" className="hover:text-black transition-colors text-gray-600">Privacy Policy</Link></li>
           <li><Link to="/terms" className="hover:text-black transition-colors text-gray-600">Terms of Service</Link></li>
+          <li><Link to="/sms-consent" className="hover:text-black transition-colors text-gray-600">SMS Consent</Link></li>
         </ul>
       </div>
     </div>
@@ -73,7 +75,7 @@ const Footer = () => (
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col selection:bg-black selection:text-white bg-white">
         <Navbar />
@@ -85,11 +87,13 @@ const App: React.FC = () => {
             <Route path="/terms" element={<Terms />} />
             <Route path="/about" element={<About />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/sms-consent" element={<SmsConsent />} />
+
           </Routes>
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
